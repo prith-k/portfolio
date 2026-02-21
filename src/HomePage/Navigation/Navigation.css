@@ -1,0 +1,155 @@
+/* Profile image wrapper: fixed size so border aligns perfectly */
+.me {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.me::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.Navigation{
+  min-width: 250px;
+      border: solid;
+      border-radius: 3px;
+      position:fixed;
+      margin-right:400px;
+      overflow-y: scroll;
+      top: 0;
+      bottom: 0;
+      background-color: #fafafa;
+}
+.Navigation a{
+  color: black;
+  text-decoration: none;
+}
+.bio {
+  margin: 20px;
+  text-align: center;
+}
+
+.bio h2 {
+  margin: 0.5em 0 0;
+}
+
+.bio .me + h2 ~ div {
+  margin-top: 0.25em;
+}
+
+.bio img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.nav-item {
+    margin: 10% 0;
+    font-size: x-large;
+    width :100%;
+}
+.nav-item:hover {
+  cursor: pointer;
+    background-color: #DAEBE9;
+    opacity: 1;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+
+}
+
+.menu{
+
+}
+.HomePage {
+  display: flex;
+}
+
+/* Active tab: background and triangle — only the current page gets this class */
+.nav-item.nav-item-active {
+  background-color: #DAEBE9;
+  cursor: default;
+}
+
+.nav-item::after {
+  content: " ";
+  display: none;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 19px solid transparent;
+  border-right: 17px solid black;
+  bottom: 6px;
+  left: auto;
+  float: right;
+  margin: 0;
+}
+
+.nav-item.nav-item-active::after {
+  display: block;
+}
+
+.contact-menu {
+  padding: 1.5rem 20px 24px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-menu a {
+  display: inline-flex;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 14px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}

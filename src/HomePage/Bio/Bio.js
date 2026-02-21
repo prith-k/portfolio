@@ -9,7 +9,7 @@ const otherSkills=["Public Speaking","Writing", "Wilderness First Aid", "Diploma
   return (
 
 <div className="Bio">
-<h1>Prithipal Khalsa</h1>
+<h1>Prith</h1>
 
   <div className="bio-content">
 
@@ -27,19 +27,6 @@ const otherSkills=["Public Speaking","Writing", "Wilderness First Aid", "Diploma
 
   </div>
   <div className="line"/>
-  <div className=" bio-entry card-border  what-do">
-  <h2>What I Can Do For You</h2>
-  I can build applications with a back-end of clean readable code and a UI that is intuitive and simple.
-
-  If you are interested in your own custom single page content management systems, similar to this one, please shoot me an email.
-  </div>
-  <div className=" bio-entry card-border  other-skills">
-  <h2>Other Skills</h2>
-  <div className="stack">
-  { otherSkills&& otherSkills.map(function(item, i){
-    return <p className="stack-item skill" key={i}>{item}</p>
-  })}
-  </div>  </div>
   </div>
 </div>
   );

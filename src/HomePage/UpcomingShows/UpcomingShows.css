@@ -1,0 +1,88 @@
+.UpcomingShows {
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.UpcomingShows h1 {
+  margin-bottom: 0.5em;
+}
+
+.UpcomingShows-intro {
+  max-width: 600px;
+  margin: 0 auto 2em;
+  text-align: center;
+}
+
+.shows-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.show-item {
+  margin: 0;
+  max-width: 400px;
+  min-width: 0;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 6px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.show-date {
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.show-venue {
+  margin: 0.25em 0;
+  font-size: 1.25rem;
+}
+
+.show-meta {
+  color: #555;
+  margin-bottom: 0.5em;
+}
+
+.show-description {
+  margin: 0.75em 0;
+  font-size: 0.95rem;
+}
+
+.show-link {
+  display: inline-block;
+  margin-top: 0.75em;
+  padding: 1em 1.15em;
+  background: #feca76;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.show-link:hover {
+  background-color: #feb43e;
+}
+
+@media screen and (min-width: 771px) {
+  .UpcomingShows {
+    margin-left: 0;
+    text-align: left;
+  }
+  .UpcomingShows-intro {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+  .show-item {
+    width: auto;
+    min-width: 280px;
+  }
+}

@@ -1,0 +1,80 @@
+.Gulp {
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Gulp h1 {
+  margin-bottom: 0.25em;
+}
+
+.Gulp-tagline {
+  font-size: 1.1rem;
+  margin-bottom: 2em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Gulp-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Gulp-content .bio-entry {
+  margin: 1rem;
+  max-width: 400px;
+  min-width: 0;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.Gulp-content .gulp-main,
+.Gulp-content .gulp-extra {
+  align-self: stretch;
+}
+
+.Gulp-content code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Poster: full image visible, no cropping */
+.Gulp-poster {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Gulp-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+}
+
+@media screen and (min-width: 771px) {
+  .Gulp {
+    text-align: left;
+  }
+  .Gulp-tagline {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .Gulp-content .bio-entry {
+    width: auto;
+    min-width: 280px;
+  }
+  .Gulp-poster {
+    max-width: 420px;
+  }
+}

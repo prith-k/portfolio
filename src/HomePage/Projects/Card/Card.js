@@ -16,16 +16,17 @@ const Card = ({stack,title,description,link,github}) => {
       <div className="descripition">{description}</div>
       <div className="stack">
 
-      { stack&& stack.map(function(item, i){
-        console.log('test');
-        return <p className="stack-item" key={i}>{item}</p>
-      })}
+      {stack && stack.map((item, i) => (
+        <p className="stack-item" key={i}>{item}</p>
+      ))}
 
       </div>
       <div className="card-nav">
-        <a href={github}  target="_blank"><img  src={gitCat} /></a>
-        <a href={link}  target="_blank" className="proj-link">Check it out</a>
-        </div>
+        {github && github !== '#' && (
+          <a href={github} target="_blank" rel="noopener noreferrer"><img src={gitCat} alt="GitHub" /></a>
+        )}
+        <a href={link} target="_blank" rel="noopener noreferrer" className="proj-link">Check it out</a>
+      </div>
     </div>
   </div>
 </div>

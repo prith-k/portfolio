@@ -1,0 +1,40 @@
+.OtherProjects {
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.OtherProjects .project-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.OtherProjects .project-title {
+  width: 100%;
+  margin: 0 auto 1rem;
+}
+
+.OtherProjects .project-subtitle {
+  max-width: 560px;
+  width: 100%;
+  margin: 0.5rem auto 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.OtherProjects .card-holders {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 771px) {
+  .OtherProjects .card-holders {
+    width: auto;
+    max-width: none;
+    margin: 1rem;
+  }
+}
