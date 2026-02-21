@@ -1,3 +1,3 @@
-## My Portfolio Site
+## My home Site
 
-[You can find it here](https://prithipalkhalsa.github.io/portfolio/)
+[You can find it here](https://prithipalkhalsa.github.io/home/)
