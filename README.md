@@ -1,3 +1,3 @@
 ## My home Site
 
-[You can find it here](https://prithipalkhalsa.github.io/home/)
+[You can find it here](https://prith-k.github.io/home/)
