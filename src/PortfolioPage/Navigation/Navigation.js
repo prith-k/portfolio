@@ -29,7 +29,6 @@ const Navigation = ({ switchFrame, frame }) => {
           <img src={`${process.env.PUBLIC_URL || ''}/profile.png`} alt="Prith" />
         </div>
         <h2>Prith</h2>
-        <div>Performer</div>
       </div>
       <div className="menu">
         {navItems.map(({ id, label }) => (
