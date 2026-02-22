@@ -1,14 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 
 import HomePage from './HomePage/HomePage.js';
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <BrowserRouter basename={process.env.PUBLIC_URL || ''}>
+      <div className="App">
+        <HomePage />
+      </div>
+    </BrowserRouter>
   );
 }
 

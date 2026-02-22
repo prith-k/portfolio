@@ -8,6 +8,14 @@ import './UpcomingShows.css';
 const UpcomingShows = () => {
   const shows = [
     {
+      date: 'Thursday, March 5, 2026',
+      venue: 'GULP! Work in Progress',
+      location: 'Denver, CO',
+      time: '7:30 PM',
+      link: 'https://www.idiottheatre.com/freaky-weeky-calendar/gulp-wip',
+      description: 'Idiot Theatre\'s Freaky Weeky at Buntport Theater.',
+    },
+    {
       date: 'March 18–28, 2026',
       venue: 'Pittsburgh Fringe Festival',
       location: 'Pittsburgh, PA',

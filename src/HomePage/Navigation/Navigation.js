@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { useHistory, useLocation } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 
 import './Navigation.css';
 
-const Navigation = ({ switchFrame, frame }) => {
+const navItems = [
+  { path: '/upcoming-shows', label: 'Upcoming Shows', className: 'shows' },
+  { path: '/gulp', label: 'GULP!', className: 'gulp' },
+  { path: '/about', label: 'About', className: 'about' },
+  { path: '/climbing', label: 'Climbing', className: 'climbing' },
+];
+
+const Navigation = () => {
+  const history = useHistory();
+  const location = useLocation();
   const [isDesktop, setDesktop] = useState(window.innerWidth > 770);
+  const pathname = location.pathname;
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 770);
@@ -15,12 +26,10 @@ const Navigation = ({ switchFrame, frame }) => {
     return () => window.removeEventListener("resize", updateMedia);
   });
 
-  const navItems = [
-    { id: 'UpcomingShows', label: 'Upcoming Shows', className: 'shows' },
-    { id: 'Gulp', label: 'GULP!', className: 'gulp' },
-    { id: 'About', label: 'About', className: 'about' },
-    { id: 'Climbing', label: 'Climbing', className: 'climbing' },
-  ];
+  const isActive = (path) => {
+    if (path === '/about') return pathname === '/' || pathname === '/about';
+    return pathname === path;
+  };
 
   const sidebar = (
     <div className="Navigation">
@@ -31,11 +40,11 @@ const Navigation = ({ switchFrame, frame }) => {
         <h2>Prith</h2>
       </div>
       <div className="menu">
-        {navItems.map(({ id, label }) => (
+        {navItems.map(({ path, label }) => (
           <div
-            key={id}
-            className={['nav-item', frame === id ? 'nav-item-active' : ''].filter(Boolean).join(' ')}
-            onClick={() => switchFrame(id)}
+            key={path}
+            className={['nav-item', isActive(path) ? 'nav-item-active' : ''].filter(Boolean).join(' ')}
+            onClick={() => history.push(path)}
           >
             {label}
           </div>

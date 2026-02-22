@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 
 import UpcomingShows from './UpcomingShows/UpcomingShows';
 import Gulp from './Gulp/Gulp';
@@ -9,41 +10,23 @@ import Navigation from './Navigation/Navigation';
 
 import './HomePage.css';
 
-const VALID_FRAMES = ['UpcomingShows', 'Gulp', 'About', 'OtherProjects', 'Climbing'];
-
-const getFrameFromHash = () => {
-  const hash = window.location.hash.slice(1);
-  return VALID_FRAMES.includes(hash) ? hash : 'About';
-};
-
 const HomePage = () => {
-  const [frame, toggleFrame] = useState(getFrameFromHash);
-
-  useEffect(() => {
-    const onHashChange = () => toggleFrame(getFrameFromHash());
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
-  }, []);
-
-  const switchFrame = (name) => {
-    if (name !== frame) {
-      toggleFrame(name);
-      window.location.hash = name;
-    }
-  };
-
   return (
     <div className="HomePage">
-      <Navigation switchFrame={switchFrame} frame={frame} />
+      <Navigation />
       <div className="frame">
-        {frame === "UpcomingShows" && <UpcomingShows />}
-        {frame === "Gulp" && <Gulp />}
-        {frame === "About" && <About />}
-        {frame === "OtherProjects" && <OtherProjects />}
-        {frame === "Climbing" && <Climbing />}
+        <Switch>
+          <Route path="/upcoming-shows" component={UpcomingShows} />
+          <Route path="/gulp" component={Gulp} />
+          <Route path="/about" component={About} />
+          <Route path="/other-projects" component={OtherProjects} />
+          <Route path="/climbing" component={Climbing} />
+          <Route exact path="/" component={About} />
+          <Route component={About} />
+        </Switch>
       </div>
     </div>
   );
-}
+};
 
 export default HomePage;
