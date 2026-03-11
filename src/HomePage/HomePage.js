@@ -21,7 +21,7 @@ const HomePage = () => {
           <Route path="/about" component={About} />
           <Route path="/other-projects" component={OtherProjects} />
           <Route path="/climbing" component={Climbing} />
-          <Route exact path="/" component={About} />
+          <Route exact path="/" component={Gulp} />
           <Route component={About} />
         </Switch>
       </div>
