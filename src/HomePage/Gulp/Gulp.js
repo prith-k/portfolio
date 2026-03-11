@@ -14,7 +14,6 @@ const Gulp = () => {
 
       <div className="Gulp-content">
         <div className="bio-entry card-border gulp-main">
-          <h2>About GULP!</h2>
           <p>
           GULP! Is an alternative-comedy clown play written and performed by Prith Khalsa and directed by Todd Sullivan. Blending game based theater and written material, GULP is an semi-interactive saga of a man who falls in a banana. It is on tour in 2026 and you can find more information and dates about it on this website.
           </p>

@@ -27,7 +27,7 @@ const Navigation = () => {
   });
 
   const isActive = (path) => {
-    if (path === '/about') return pathname === '/' || pathname === '/about';
+    if (path === '/gulp') return pathname === '/' || pathname === '/gulp';
     return pathname === path;
   };
 

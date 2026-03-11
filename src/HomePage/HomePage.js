@@ -22,7 +22,7 @@ const HomePage = () => {
           <Route path="/other-projects" component={OtherProjects} />
           <Route path="/climbing" component={Climbing} />
           <Route exact path="/" component={Gulp} />
-          <Route component={About} />
+          <Route component={Gulp} />
         </Switch>
       </div>
     </div>
