@@ -26,7 +26,7 @@ const Gulp = () => {
       </section>
 
         <div className="Gulp-reviews card-border">
-          <h2>Reviews</h2>
+          <h2>Audience Reviews</h2>
           <blockquote className="Gulp-review">
             <p>“A wildly inventive piece of physical comedy that turns absurdity into something playful, tender, and unexpectedly heartfelt.”</p>
             <cite>— TC M.</cite>
